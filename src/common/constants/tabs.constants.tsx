@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 type Tabs = {
   home: TabItem[];
   mySpace: TabItem[];
+  mySpaceOverview: TabItem[];
 };
 
 const t = (href: Path, label: string): TabItem => ({
@@ -25,5 +26,15 @@ export const TABS: Tabs = {
   mySpace: [
     t("/home/my-space/overview", "Overview"),
     t("/home/my-space/dashboard", "Dashboard"),
+  ],
+  mySpaceOverview: [
+    t("/home/my-space/overview/activities", "Activities"),
+    t("/home/my-space/overview/feeds", "Feeds"),
+    t("/home/my-space/overview/profile", "Profile"),
+    t("/home/my-space/overview/approvals", "Approvals"),
+    t("/home/my-space/overview/leave", "Leave"),
+    t("/home/my-space/overview/files", "Files"),
+    t("/home/my-space/overview/payslips", "Payslips"),
+    t("/home/my-space/overview/related-data", "Related Data"),
   ],
 };

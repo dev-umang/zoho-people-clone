@@ -5,6 +5,14 @@ export const Paths = [
   "/dashboard",
   // Home My Space Routes
   "/home/my-space/overview",
+  "/home/my-space/overview/activities",
+  "/home/my-space/overview/feeds",
+  "/home/my-space/overview/profile",
+  "/home/my-space/overview/approvals",
+  "/home/my-space/overview/leave",
+  "/home/my-space/overview/files",
+  "/home/my-space/overview/payslips",
+  "/home/my-space/overview/related-data",
   "/home/my-space/dashboard",
   // Home Team Routes
   "/home/team/team-space",

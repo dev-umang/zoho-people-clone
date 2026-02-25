@@ -4,9 +4,18 @@ import { MainLayout } from "@app/layouts";
 import type { Path } from ".";
 import { Page404 } from "@modules/404";
 import { SplashPage } from "@modules/splash";
-import OverviewPage from "@modules/home/mySpace/pages/overview.page";
 import MySpaceLayout from "@modules/home/mySpace/layouts/mySpace.layout";
 import DashboardPage from "@modules/home/mySpace/pages/dashboard.page";
+import MySpaceOverviewLayout from "@modules/home/mySpace/layouts/mySpaceOverview.layout";
+import MySpaceActivitiesPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceActivities.page";
+import MySpaceFeedsPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceFeeds.page";
+import MySpaceProfilePage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceProfile.page";
+import MySpaceApprovalsPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceApprovals.page";
+import MySpaceLeavePage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceLeave.page";
+import MySpaceFilesPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceFiles.page";
+import MySpacePayslipsPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpacePayslips.page";
+import MySpaceRelatedDataPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceRelatedData.page";
+import MySpaceOverviewPage from "@modules/home/mySpace/pages/mySpaceOverview.page";
 
 // Returns dynamic paths according to given parameters for specific module
 export const Href = {};
@@ -27,7 +36,17 @@ export const AppRoutes: RouteObject[] = [
   r(SplashPage, "/"),
   r(MainLayout, [
     r(MySpaceLayout, [
-      r(OverviewPage, "/home/my-space/overview"),
+      r(MySpaceOverviewPage, "/home/my-space/overview"),
+      r(MySpaceOverviewLayout, [
+        r(MySpaceActivitiesPage, "/home/my-space/overview/activities"),
+        r(MySpaceFeedsPage, "/home/my-space/overview/feeds"),
+        r(MySpaceProfilePage, "/home/my-space/overview/profile"),
+        r(MySpaceApprovalsPage, "/home/my-space/overview/approvals"),
+        r(MySpaceLeavePage, "/home/my-space/overview/leave"),
+        r(MySpaceFilesPage, "/home/my-space/overview/files"),
+        r(MySpacePayslipsPage, "/home/my-space/overview/payslips"),
+        r(MySpaceRelatedDataPage, "/home/my-space/overview/related-data"),
+      ]),
       r(DashboardPage, "/home/my-space/dashboard"),
     ]),
     r(DashboardPage, "/leave-tracker"),

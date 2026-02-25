@@ -17,7 +17,7 @@ const ThemeProvider: FC<Props> = ({ children }) => {
           colorPrimary: c.active,
           colorBorderSecondary: c.border,
           colorBgContainer: c.container,
-          borderRadius: 4,
+          borderRadius: 8,
           colorBgElevated: c.container,
           colorText: c.bodyPrimaryText,
         },
@@ -87,7 +87,7 @@ const ThemeProvider: FC<Props> = ({ children }) => {
           Tabs: {
             margin: 0,
             horizontalItemGutter: 20,
-            horizontalItemPadding: "8px 8px",
+            horizontalItemPadding: "0",
             colorBorderSecondary: "transparent",
             itemColor: c.bodySecondaryText,
           },

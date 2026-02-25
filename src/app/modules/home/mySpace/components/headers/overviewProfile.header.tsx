@@ -6,11 +6,12 @@ const OverviewProfileHeader: FC = () => {
   const user = DATA.currentUser;
   return (
     <div className="relative">
-      <Card className="text-center">
-        <div className="">
+      <Card size="small" className="text-center">
+        <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
           <Avatar
             shape="square"
-            className="z-10 absolute -top-24 h-32! w-32! bg-gray-200 flex items-center justify-center text-xl font-bold"
+            src={user.photoURL}
+            className="z-10 bg-slate-600! h-24! w-24! flex items-center justify-center text-xl font-bold"
           >
             {user.name
               .split(" ")
@@ -18,7 +19,7 @@ const OverviewProfileHeader: FC = () => {
               .join("")}
           </Avatar>
         </div>
-        <div className="text-sm/snug">
+        <div className="text-sm/snug mt-8 mb-2">
           <div>
             <span className="text-muted">{user.employeeCode}</span> -{" "}
             <strong>{user.name}</strong>
