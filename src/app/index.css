@@ -1,0 +1,78 @@
+@layer theme, base, antd, components, utilities;
+
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@plugin 'tailwind-scrollbar';
+
+@theme {
+  --spacing-default: 0.5rem;
+  --spacing-xs: 0.25rem;
+  --spacing-layout: 90rem;
+
+  --color-active: #0088ff;
+
+  --color-muted: #737c96;
+
+  --color-header: #2e3b61;
+  --color-sider: #1c2655;
+
+  --color-container: #ffffff;
+}
+.dark {
+  --color-container: #0a0a0f;
+  --color-active: #0088ff;
+}
+a {
+  color: unset;
+}
+@layer utilities {
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+    width: 0px; /* <- your custom width */
+    height: 0px; /* <- your custom height */
+  }
+
+  /* Track color */
+  .scrollbar-track-white {
+    --scrollbar-track: transparent;
+    --scrollbar-thumb: oklch(0.65 0.18 134.64);
+  }
+}
+
+/* Default tab text color - dull white */
+.header-tab .ant-tabs-tab .ant-tabs-tab-btn {
+  color: rgba(255, 255, 255, 0.65);
+  transition: all 0.3s ease-in-out;
+}
+
+/* Change the color of the tab text on hover */
+.header-tab .ant-tabs-tab:hover .ant-tabs-tab-btn {
+  color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Change the color of the active tab text */
+.header-tab .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+  color: #56b0ff; /* Your desired color */
+  transition: all 0.3s ease-in-out;
+}
+
+/* Keep active tab color on hover */
+.header-tab .ant-tabs-tab.ant-tabs-tab-active:hover .ant-tabs-tab-btn {
+  color: #56b0ff;
+}
+
+/* Optional: Change the color of the bottom indicator bar */
+.header-tab .ant-tabs-ink-bar {
+  background: #56b0ff;
+  transition: all 0.3s ease-in-out;
+}
