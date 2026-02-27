@@ -12,7 +12,7 @@ const MySpaceOverviewLayout: FC = () => {
       <div className="relative min-h-96 -top-8 px-13 grid grid-cols-[280px_1fr] gap-default">
         <OverviewProfileHeader />
         <div>
-          <Card styles={{ body: { padding: 0 } }}>
+          <Card styles={{ body: { padding: '0px 16px' } }}>
             <Tabs items={TABS.mySpaceOverview} />
           </Card>
           <Outlet />

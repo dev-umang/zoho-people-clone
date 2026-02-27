@@ -15,7 +15,7 @@ type ThemeColors = Partial<{
 
 export const Colors: { [k in "light" | "dark"]: ThemeColors } = {
   light: {
-    bodyPrimary: "#F3F3F3",
+    bodyPrimary: "#E6E6E6",
     bodySecondary: "#E7E6E6",
     bodyPrimaryText: "#000000",
     bodySecondaryText: "#6B6B6BFF",

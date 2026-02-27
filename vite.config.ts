@@ -42,7 +42,7 @@ const plugins: PluginOption[] = [
 
 export default defineConfig(async ({ mode }) => {
   const env = loadEnv(mode, process.cwd()); // Load env file according to mode.
-  const port = Number(env.VITE_PORT ?? 3000); // Get the PORT from env or 3000 if not available
+  const port = Number(env.VITE_PORT ?? 4000); // Get the PORT from env or 3000 if not available
   return {
     plugins,
     build: {

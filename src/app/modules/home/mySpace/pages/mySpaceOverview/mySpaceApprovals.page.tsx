@@ -1,10 +1,10 @@
 import { type FC } from "react";
-import { WorkInProgressInfo } from "@components/shared";
+import ApprovalsList from "../../components/approvalsList/approvals.list";
 
 const MySpaceApprovalsPage: FC = () => {
   return (
     <main>
-      <WorkInProgressInfo />
+      <ApprovalsList />
     </main>
   );
 };

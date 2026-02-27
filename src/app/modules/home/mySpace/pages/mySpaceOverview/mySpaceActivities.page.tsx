@@ -1,10 +1,10 @@
 import { type FC } from "react";
-import { WorkInProgressInfo } from "@components/shared";
+import GreetingsHeader from "../../components/headers/greetings.header";
 
 const MySpaceActivitiesPage: FC = () => {
   return (
-    <main>
-      <WorkInProgressInfo />
+    <main className="my-default">
+      <GreetingsHeader />
     </main>
   );
 };
