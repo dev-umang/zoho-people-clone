@@ -1,7 +1,6 @@
-export type LeaveType = {
-  employeeId: string;
-  name: string;
-  photoURL: string;
+import { EmployeeType } from "@modules/team/types/team.types";
+
+export type LeaveType = EmployeeType & {
   type: string;
   from: string;
   to: string;
