@@ -1,10 +1,9 @@
-import { type FC } from "react";
+import { ReactElement, type FC } from "react";
 import { type RouteObject } from "react-router-dom";
 import { MainLayout } from "@app/layouts";
 import type { Path } from ".";
 import { Page404 } from "@modules/404";
 import { SplashPage } from "@modules/splash";
-import MySpaceLayout from "@modules/home/mySpace/layouts/mySpace.layout";
 import DashboardPage from "@modules/home/mySpace/pages/dashboard.page";
 import MySpaceOverviewLayout from "@modules/home/mySpace/layouts/mySpaceOverview.layout";
 import MySpaceActivitiesPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceActivities.page";
@@ -16,6 +15,7 @@ import MySpaceFilesPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpac
 import MySpacePayslipsPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpacePayslips.page";
 import MySpaceRelatedDataPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceRelatedData.page";
 import MySpaceOverviewPage from "@modules/home/mySpace/pages/mySpaceOverview.page";
+import NavigationLayout from "@app/layouts/navigation/navigation.layout";
 
 // Returns dynamic paths according to given parameters for specific module
 export const Href = {};
@@ -30,12 +30,21 @@ const r = (
   children: typeof extra === "object" ? extra : undefined,
 });
 
+const l = (
+  Component: ReactElement,
+  extra: Path | undefined | "*" | RouteObject[] = undefined,
+): RouteObject => ({
+  path: typeof extra === "string" ? extra : undefined,
+  element: Component,
+  children: typeof extra === "object" ? extra : undefined,
+});
+
 // Application router configuration. Path to component mapping
 export const AppRoutes: RouteObject[] = [
   r(Page404, "*"),
   r(SplashPage, "/"),
   r(MainLayout, [
-    r(MySpaceLayout, [
+    l(<NavigationLayout menuKey="mySpace" />, [
       r(MySpaceOverviewPage, "/home/my-space/overview"),
       r(MySpaceOverviewLayout, [
         r(MySpaceActivitiesPage, "/home/my-space/overview/activities"),
@@ -49,7 +58,11 @@ export const AppRoutes: RouteObject[] = [
       ]),
       r(DashboardPage, "/home/my-space/dashboard"),
     ]),
-    r(DashboardPage, "/leave-tracker"),
+    l(<NavigationLayout menuKey="leaveTrackerMyData" />, [
+      r(DashboardPage, "/leave-tracker/my-data/summary"),
+      r(DashboardPage, "/leave-tracker/my-data/balance"),
+      r(DashboardPage, "/leave-tracker/my-data/requests"),
+    ]),
     r(DashboardPage, "/files"),
     r(DashboardPage, "/travel"),
     r(DashboardPage, "/compensation"),

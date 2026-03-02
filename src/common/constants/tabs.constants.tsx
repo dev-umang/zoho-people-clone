@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 type Tabs = {
   home: TabItem[];
   mySpace: TabItem[];
+  leaveTrackerMyData: TabItem[];
+  "leave-tracker": TabItem[];
   mySpaceOverview: TabItem[];
 };
 
@@ -26,6 +28,16 @@ export const TABS: Tabs = {
   mySpace: [
     t("/home/my-space/overview", "Overview"),
     t("/home/my-space/dashboard", "Dashboard"),
+  ],
+  leaveTrackerMyData: [
+    t("/leave-tracker/my-data/summary", "Leave Summary"),
+    t("/leave-tracker/my-data/balance", "Leave Balance"),
+    t("/leave-tracker/my-data/requests", "My Requests"),
+  ],
+  "leave-tracker": [
+    t("/leave-tracker/my-data/summary", "My Data"),
+    t("/leave-tracker/team/members", "Team"),
+    t("/leave-tracker/holidays", "Holidays"),
   ],
   mySpaceOverview: [
     t("/home/my-space/overview/activities", "Activities"),

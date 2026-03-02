@@ -27,8 +27,18 @@ export const Paths = [
   "/home/organization/policies",
   "/home/organization/employees",
   "/home/organization/events",
+  // ? Leave Tracker Routes
+  // Leave tracker my data routes
+  "/leave-tracker/my-data/summary",
+  "/leave-tracker/my-data/balance",
+  "/leave-tracker/my-data/requests",
+  // Leave tracker team data routes
+  "/leave-tracker/team/members",
+  "/leave-tracker/team/availability",
+  "/leave-tracker/team/requests",
+  // Leave tracker holiday routes
+  "/leave-tracker/holidays",
 
-  "/leave-tracker",
   "/files",
   "/travel",
   "/compensation",

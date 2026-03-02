@@ -25,7 +25,7 @@ const nm = (
 export const MENUS: Menus = {
   sidebar: [
     nm("/home/my-space/overview", "Home", "HomeOutlined", "HomeFilled"),
-    nm("/leave-tracker", "Leaves", "CarOutlined", "CarFilled"),
+    nm("/leave-tracker/my-data/summary", "Leaves", "CarOutlined", "CarFilled"),
     nm("/files", "Files", "FolderOutlined", "FolderFilled"),
     nm("/travel", "Travel", "RocketOutlined", "RocketFilled"),
     nm(
