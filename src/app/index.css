@@ -11,6 +11,7 @@
 @theme {
   --spacing-default: 0.5rem;
   --spacing-xs: 0.25rem;
+  --spacing-large: 1rem;
   --spacing-layout: 90rem;
 
   --color-active: #0088ff;

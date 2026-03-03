@@ -16,6 +16,7 @@ import MySpacePayslipsPage from "@modules/home/mySpace/pages/mySpaceOverview/myS
 import MySpaceRelatedDataPage from "@modules/home/mySpace/pages/mySpaceOverview/mySpaceRelatedData.page";
 import MySpaceOverviewPage from "@modules/home/mySpace/pages/mySpaceOverview.page";
 import NavigationLayout from "@app/layouts/navigation/navigation.layout";
+import LeaveSummaryPage from "@modules/leaveTracker/myData/pages/leaveSummary.page";
 
 // Returns dynamic paths according to given parameters for specific module
 export const Href = {};
@@ -59,7 +60,7 @@ export const AppRoutes: RouteObject[] = [
       r(DashboardPage, "/home/my-space/dashboard"),
     ]),
     l(<NavigationLayout menuKey="leaveTrackerMyData" />, [
-      r(DashboardPage, "/leave-tracker/my-data/summary"),
+      r(LeaveSummaryPage, "/leave-tracker/my-data/summary"),
       r(DashboardPage, "/leave-tracker/my-data/balance"),
       r(DashboardPage, "/leave-tracker/my-data/requests"),
     ]),
