@@ -8,6 +8,7 @@ type Tabs = {
   leaveTrackerMyData: TabItem[];
   "leave-tracker": TabItem[];
   mySpaceOverview: TabItem[];
+  leaveTrackerTeam: TabItem[];
 };
 
 const t = (href: Path, label: string): TabItem => ({
@@ -36,7 +37,7 @@ export const TABS: Tabs = {
   ],
   "leave-tracker": [
     t("/leave-tracker/my-data/summary", "My Data"),
-    t("/leave-tracker/team/members", "Team"),
+    t("/leave-tracker/team/reportees", "Team"),
     t("/leave-tracker/holidays", "Holidays"),
   ],
   mySpaceOverview: [
@@ -49,4 +50,5 @@ export const TABS: Tabs = {
     t("/home/my-space/overview/payslips", "Payslips"),
     t("/home/my-space/overview/related-data", "Related Data"),
   ],
+  leaveTrackerTeam: [t("/leave-tracker/team/reportees", "Reportees")],
 };

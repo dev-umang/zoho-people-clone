@@ -13,7 +13,7 @@ const EmployeeInfoTemplate: FC<EmployeeInfoTemplateProps> = ({
 }) => {
   return (
     <div className="flex gap-default items-center">
-      <Avatar shape="square" src={info?.photoURL} />
+      <Avatar size={"large"} shape="square" src={info?.photoURL} />
       <div>
         <div>
           <span className="text-muted">{info?.employeeId}</span>

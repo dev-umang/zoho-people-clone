@@ -33,7 +33,7 @@ export const Paths = [
   "/leave-tracker/my-data/balance",
   "/leave-tracker/my-data/requests",
   // Leave tracker team data routes
-  "/leave-tracker/team/members",
+  "/leave-tracker/team/reportees",
   "/leave-tracker/team/availability",
   "/leave-tracker/team/requests",
   // Leave tracker holiday routes
