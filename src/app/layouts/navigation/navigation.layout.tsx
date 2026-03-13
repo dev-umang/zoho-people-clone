@@ -17,7 +17,7 @@ const NavigationLayout: FC<Props> = ({ menuKey }) => {
           borderTop: "none",
           borderRight: "none",
           position: "sticky",
-          top: 44,
+          top: 43,
           zIndex: 12,
         }}
         styles={{ body: { padding: 0 } }}

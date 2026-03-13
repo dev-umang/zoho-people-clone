@@ -11,7 +11,7 @@ const MainHeader: FC = () => {
     useLocation().pathname.split("/").filter(Boolean)[0] || "";
 
   return (
-    <div className="h-12 sticky top-0 bg-header text-white px-4 border-b border-neutral-200 dark:border-neutral-800">
+    <div className="h-12 sticky top-0 z-50 bg-header text-white px-4 border-b border-neutral-200 dark:border-neutral-800">
       <header className="flex h-full items-center justify-between overflow-x-auto overflow-y-hidden">
         <div className="self-end">
           <Tabs
